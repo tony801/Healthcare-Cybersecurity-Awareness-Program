@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+    line-height: 2.8;
+    color:darkslateblue;
+  }
+  nav { /*navigation bar*/
+    height: 80px;
+    background: rgb(208, 242, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+    z-index: 2;
+  }
+
+  .nav-items { /*items in navigation bar*/
+    z-index: 2;
+  }
+  
+  .logo {
+    color: darkslateblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+    z-index: 2;
+  }
+  
+  nav a { /*links in nav bar*/
+    text-decoration: none;
+    color: darkslateblue;
+    padding: 0 1.5rem;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  .hero { /*first body in homepage*/
+    position: relative;
+    background-image: url(background.jpg);
+    padding-bottom: 100px;
+    opacity: 0.8;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgb(140, 67, 230), rgba(0, 191, 255, 0.658));
+    z-index: 1;
+    opacity: 0.4;
+  }
+  
+  .hero-container { /*container for first body in homepage*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+  }
+
+  .hero .column-left {
+    z-index: 2;
+  }
+
+
+  
+  .column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #41428a;
+    padding: 0rem 2rem;
+  }
+  
+  .column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+  
+  .column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: skyblue;
+    background: darkslateblue;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  
+  button:hover {
+    background: #fff;
+    color: darkslateblue;
+  }
+  
+  .column-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 2rem;
+  }
+  
+  .hero-image { /*image for first */
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+    }
+    .mission-container {
+      grid-template-columns: 1fr;
+    }
+    .description-container {
+      grid-template-columns: 1fr;
+    }
+    .lessons-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .mission { /*second body in homepage*/
+    color: darkslateblue;
+    background: linear-gradient(rgb(179, 221, 237), skyblue);
+  }
+
+  .mission h1 {
+    text-align: center;
+    padding: 15px;
+    background-color: darkslateblue;
+    color:rgb(198, 236, 252);
+  }
+
+  .mission p{
+    letter-spacing: 1.5px;
+    word-spacing: 7px;
+    margin: 20px;
+  }
+
+  body {
+    background-color: #e4f5fd;
+    opacity: 0.8px;
+  }
+
+  .lessons { /*second body in lessons page with units for review*/
+    color: darkslateblue;
+    background-image: url(background.jpg);
+    padding-bottom: 50px;
+  }
+
+  .lessons::before {
+    margin-top: 125px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 191, 255, 0.658), rgb(140, 67, 230));
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .lessons h2{ 
+    color:aliceblue;
+    background-color: darkslateblue;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .lessons a {
+    z-index: 2;
+  }
+  
+  .lessons button{
+    margin: 15px;
+  }
+
+  .lessons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .lessons .column-left {
+    align-items: center;
+  }
+
+  .mission-container { /*container for second body in homepage*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+  }
+
+  .description { /*first body in lessons page*/
+    background-image: url(background.jpg);
+    position: relative;
+  }
+
+  .description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(145, 155, 244, 0.808), rgba(148, 228, 252, 0.82));
+    z-index: 1;
+    opacity: 0.6;
+  }
+
+  .description-container { /*container for first body in lessons page*/
+    background-image: url(background.jpg);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 50vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+    padding-bottom: 400px;
+  }
+
+  .description .column-left {
+    z-index: 2;
+  }
+
+  .description .column-right {
+    z-index: 2;
+  }
+
+  .description-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .lessons h1 {
+    padding: 20px;
+    background-color: #d5fffb;
+  }
+
+  .video { /**/
+    padding: 30px;
+    background-image: url(background.jpg);
+    height: 1160px;
+  }
+
+  .video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1190px;
+    padding: 30px;
+    background: linear-gradient(0deg, rgb(140, 67, 230), rgba(0, 191, 255, 0.658));
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .video .column-right {
+    align-items: flex-start;
+    z-index: 2;
+  }
+
+  ul {
+    margin-left: 25px;
+  }
+
+  .bottom {
+    padding: 30px;
+    background-color: darkslateblue;
+    color: skyblue;
+    z-index: 2;
+  }
+
+
+
+  .video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+  }
+
+  .video .column-left {
+    justify-content: flex-start;
+    flex-direction: column;
+    z-index: 2;
+  }
+
+  .scroll {
+    height: 300px;
+    width: 600px;
+    padding: 20px;
+    overflow-y: scroll;
+    background: linear-gradient(0deg, rgb(243, 234, 255), rgb(202, 227, 236));
+    margin-top: 30px;
+    border: 10px;
+    border-color: darkslateblue;
+  }
+
+  .below {
+    margin: 0 auto;
+    z-index: 2;
+  }
